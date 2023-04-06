@@ -1,0 +1,11 @@
+<div class="mb-3">
+  <label for="birthdateField" class="form-label">Birth Date</label>
+  <input
+    #birthdateField
+    type="date"
+    class="form-control"
+    id="birthdateField"
+    max="{{ today }}"
+    (input)="setDate(birthdateField.value)"
+  />
+</div>

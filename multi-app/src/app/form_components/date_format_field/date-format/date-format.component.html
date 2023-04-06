@@ -1,0 +1,27 @@
+<label for="flexRadioDefault" class="form-label">Date Format</label>
+<div class="grid-view">
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="dateFormat"
+      id="dateFormat1"
+      value="indian"
+      (change)="changeRadio($event)"
+      checked
+    />
+
+    <label class="form-check-label" for="dateFormat1"> DD/MM/YYYY </label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="dateFormat"
+      id="dateFormat2"
+      value="british"
+      (change)="changeRadio($event)"
+    />
+    <label class="form-check-label" for="dateFormat2"> DD MMM, YYYY </label>
+  </div>
+</div>

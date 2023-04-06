@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Users Form</h1>
+  <br />
+  <form action="">
+    <app-name (emitName)="setName($event)"> </app-name> <br />
+    <app-email (emitEmail)="setEmail($event)"> </app-email>
+    <br />
+    <app-gender (emitGender)="setGender($event)"> </app-gender> <br />
+    <app-hobbies (emitHobbies)="setHobbies($event)"> </app-hobbies> <br />
+    <app-nationality (emitNationality)="setNationality($event)">
+    </app-nationality>
+    <br />
+    <app-birthdate (emitDate)="setBirthdate($event)"></app-birthdate><br />
+    <app-date-format (emitDateFormat)="setDateFormat($event)"></app-date-format>
+    <br />
+    <app-submit (emitClick)="storeData($event)"> </app-submit>
+  </form>
+  <br /><br />
+  <app-show-data
+    [name]="newData['name']"
+    [email]="newData['email']"
+    [gender]="newData['gender']"
+    [hobbies]="newData['hobbies'].join(', ')"
+    [nationality]="newData['natioanality']"
+    [birthdate]="newData['birthdate']"
+    *ngIf="submitted"
+  ></app-show-data>
+</div>
