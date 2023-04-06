@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  text-align: center;
+  row-gap: 20px;
+}
