@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/dist/css/bootstrap.css";
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: auto;
+  margin-left: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  padding-top: 25px;
+}
+
+#input-area {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+#input-area:focus,
+#input-area:hover {
+  box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  width: 150px;
+  align-self: center;
+}
+
+.error {
+  font-size: 10px;
+  color: red;
+  vertical-align: top;
+}
+
+table,
+td {
+  border: 1px solid black;
+  border-spacing: 0px;
+}
+
+table {
+  margin: 20px 20px;
+}
+td {
+  padding: 5px 20px;
+}

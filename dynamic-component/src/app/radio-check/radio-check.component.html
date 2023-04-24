@@ -1,0 +1,19 @@
+<label class="form-label"
+  >{{ label }}&nbsp;<span class="error" *ngIf="required">*</span></label
+><br />
+
+<div class="form-check" *ngFor="let check of checkarray">
+  <input
+    [class]="class"
+    [type]="type"
+    [value]="check"
+    [id]="id"
+    [name]="componentId"
+    [checked]="checked"
+    (change)="emitData($event)"
+    (onblur)="verifyField()"
+    (blur)="verifyField()"
+  />&nbsp;&nbsp;
+  <label class="form-check-label" for="{{ id }}"> {{ check }} </label>
+</div>
+<span class="error" *ngIf="!isverify">{{ errorMessege }}</span>

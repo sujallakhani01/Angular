@@ -1,0 +1,27 @@
+<div class="main-container">
+  <div class="view-container">
+    <div class="form-container">
+      <ng-container #container class="content"></ng-container><br />
+      <app-submit *ngIf="showSubmit" (emitClick)="showInfo()"></app-submit>
+      <h6 style="color: red" *ngIf="!showSubmit">
+        Enter valid JSON Data to create the form
+      </h6>
+    </div>
+    <table *ngIf="isSubmitted">
+      <tr *ngFor="let data of info">
+        <td>{{ data.label }}</td>
+        <td>{{ data.value }}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="input-container">
+    <textarea
+      rows="28"
+      id="input-area"
+      placeholder="Enter your JSON data here..."
+      [(ngModel)]="data"
+      (input)="render()"
+    ></textarea
+    ><br />
+  </div>
+</div>

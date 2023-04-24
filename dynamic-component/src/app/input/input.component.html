@@ -1,0 +1,19 @@
+<div class="mb-3">
+  <label class="form-label"
+    >{{ label }}&nbsp;<span class="error" *ngIf="required">*</span></label
+  ><br />
+  <input
+    [type]="type"
+    [class]="class"
+    [id]="id"
+    [name]="name"
+    [placeholder]="placeholder"
+    [value]="value"
+    [min]="min"
+    [max]="max"
+    [required]="required"
+    (input)="emitData($event)"
+    (blur)="verifyField()"
+  />
+  <p class="error" *ngIf="!isverify">{{ errorMessege }}</p>
+</div>

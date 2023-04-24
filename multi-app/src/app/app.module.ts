@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { BirthdateComponent } from './form_components/birthdate_field/birthdate/birthdate.component';
 import { DateFormatComponent } from './form_components/date_format_field/date-format/date-format.component';
 import { ShowDataComponent } from './form_components/show_data/show-data/show-data.component';
+import { LabelComponent } from './label/label.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ShowDataComponent } from './form_components/show_data/show-data/show-da
     BirthdateComponent,
     DateFormatComponent,
     ShowDataComponent,
+    LabelComponent,
   ],
   imports: [BrowserModule, FormsModule],
   exports: [
